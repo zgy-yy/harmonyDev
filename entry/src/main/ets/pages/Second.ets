@@ -1,4 +1,5 @@
 import router from '@ohos.router'
+import { RowLayout } from '../layout/RowLayout'
 @Entry
 @Component
 struct Page {
@@ -7,7 +8,7 @@ struct Page {
     console.info("##点击返回")
   }
   build() {
-    Row(){
+    Column(){
       Text(this.message).fontSize(40)
       Button(){
         Text("back").fontSize(30).padding(12).width(100)
