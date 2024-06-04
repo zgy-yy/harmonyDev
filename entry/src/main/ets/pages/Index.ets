@@ -9,21 +9,6 @@ struct Index {
   @State IndNum :number= 11
   onPageShow(){
     console.info("##页面出现")
-    let httpRequest = http.createHttp();
-    httpRequest.request(
-      "http://v.juhe.cn/toutiao/index?type=top&key=APPKEY",                    // 请求的URL
-      {
-        method: http.RequestMethod.GET, // 设置请求方法
-        header: {
-          'Content-Type': 'application/json'      // 添加Header，header 默认值就是application/json
-        },
-        connectTimeout: 15000,                    // 超时时间
-      }
-    ).then(res=>{
-      console.info("##request:",JSON.stringify(res))
-    }).catch(err=>{
-      console.info("##err:",JSON.stringify(err))
-    })
   }
   onPageHide(){
     console.info("##页面隐藏")
